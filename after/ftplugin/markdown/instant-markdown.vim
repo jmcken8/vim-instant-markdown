@@ -77,7 +77,7 @@ function! s:startDaemon(initialMDLines)
         let env .= 'INSTANT_MARKDOWN_BLOCK_EXTERNAL=1 '
     endif
 
-    call s:systemasync('instant-markdown-d', a:initialMDLines)
+    call s:systemasync(env . ' instant-markdown-d', a:initialMDLines)
 endfu
 
 function! s:initDict()
